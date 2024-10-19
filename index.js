@@ -21,8 +21,9 @@ const code = hiddenCode.split('');
 // console.log(code);
 let newMessage = "";
 for(let i=0; i < hiddenCode.length; i++){
-    if(hiddenCode[i] !== "X"){
-        newMessage = newMessage + hiddenCode[i];
-    }
-}
+  let code = hiddenCode[i];
+if(code !== "X" && parseInt(code) % 2 !== 0)
+      newMessage = newMessage + code; 
+  }
+
 console.log(newMessage);
